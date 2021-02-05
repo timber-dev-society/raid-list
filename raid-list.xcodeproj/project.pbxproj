@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		114C9FD225CDDDBF0011852D /* raid_listApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9FD125CDDDBF0011852D /* raid_listApp.swift */; };
+		114C9FD425CDDDBF0011852D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9FD325CDDDBF0011852D /* ContentView.swift */; };
+		114C9FD625CDDDC60011852D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114C9FD525CDDDC60011852D /* Assets.xcassets */; };
+		114C9FD925CDDDC60011852D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114C9FD825CDDDC60011852D /* Preview Assets.xcassets */; };
+		114C9FDB25CDDDC60011852D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9FDA25CDDDC60011852D /* Persistence.swift */; };
+		114C9FDE25CDDDC60011852D /* raid_list.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 114C9FDC25CDDDC60011852D /* raid_list.xcdatamodeld */; };
+		114C9FE925CDDDC60011852D /* raid_listTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9FE825CDDDC60011852D /* raid_listTests.swift */; };
+		114C9FF425CDDDC60011852D /* raid_listUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9FF325CDDDC60011852D /* raid_listUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		114C9FE525CDDDC60011852D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 114C9FC625CDDDBF0011852D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 114C9FCD25CDDDBF0011852D;
+			remoteInfo = "raid-list";
+		};
+		114C9FF025CDDDC60011852D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 114C9FC625CDDDBF0011852D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 114C9FCD25CDDDBF0011852D;
+			remoteInfo = "raid-list";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		114C9FCE25CDDDBF0011852D /* raid-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "raid-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		114C9FD125CDDDBF0011852D /* raid_listApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = raid_listApp.swift; sourceTree = "<group>"; };
+		114C9FD325CDDDBF0011852D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		114C9FD525CDDDC60011852D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		114C9FD825CDDDC60011852D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		114C9FDA25CDDDC60011852D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		114C9FDD25CDDDC60011852D /* raid_list.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = raid_list.xcdatamodel; sourceTree = "<group>"; };
+		114C9FDF25CDDDC60011852D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		114C9FE425CDDDC60011852D /* raid-listTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "raid-listTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		114C9FE825CDDDC60011852D /* raid_listTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = raid_listTests.swift; sourceTree = "<group>"; };
+		114C9FEA25CDDDC60011852D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		114C9FEF25CDDDC60011852D /* raid-listUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "raid-listUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		114C9FF325CDDDC60011852D /* raid_listUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = raid_listUITests.swift; sourceTree = "<group>"; };
+		114C9FF525CDDDC60011852D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		114C9FCB25CDDDBF0011852D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		114C9FE125CDDDC60011852D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		114C9FEC25CDDDC60011852D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		114C9FC525CDDDBF0011852D = {
+			isa = PBXGroup;
+			children = (
+				114C9FD025CDDDBF0011852D /* raid-list */,
+				114C9FE725CDDDC60011852D /* raid-listTests */,
+				114C9FF225CDDDC60011852D /* raid-listUITests */,
+				114C9FCF25CDDDBF0011852D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		114C9FCF25CDDDBF0011852D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				114C9FCE25CDDDBF0011852D /* raid-list.app */,
+				114C9FE425CDDDC60011852D /* raid-listTests.xctest */,
+				114C9FEF25CDDDC60011852D /* raid-listUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		114C9FD025CDDDBF0011852D /* raid-list */ = {
+			isa = PBXGroup;
+			children = (
+				114C9FD125CDDDBF0011852D /* raid_listApp.swift */,
+				114C9FD325CDDDBF0011852D /* ContentView.swift */,
+				114C9FD525CDDDC60011852D /* Assets.xcassets */,
+				114C9FDA25CDDDC60011852D /* Persistence.swift */,
+				114C9FDF25CDDDC60011852D /* Info.plist */,
+				114C9FDC25CDDDC60011852D /* raid_list.xcdatamodeld */,
+				114C9FD725CDDDC60011852D /* Preview Content */,
+			);
+			path = "raid-list";
+			sourceTree = "<group>";
+		};
+		114C9FD725CDDDC60011852D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				114C9FD825CDDDC60011852D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		114C9FE725CDDDC60011852D /* raid-listTests */ = {
+			isa = PBXGroup;
+			children = (
+				114C9FE825CDDDC60011852D /* raid_listTests.swift */,
+				114C9FEA25CDDDC60011852D /* Info.plist */,
+			);
+			path = "raid-listTests";
+			sourceTree = "<group>";
+		};
+		114C9FF225CDDDC60011852D /* raid-listUITests */ = {
+			isa = PBXGroup;
+			children = (
+				114C9FF325CDDDC60011852D /* raid_listUITests.swift */,
+				114C9FF525CDDDC60011852D /* Info.plist */,
+			);
+			path = "raid-listUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		114C9FCD25CDDDBF0011852D /* raid-list */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 114C9FF825CDDDC60011852D /* Build configuration list for PBXNativeTarget "raid-list" */;
+			buildPhases = (
+				114C9FCA25CDDDBF0011852D /* Sources */,
+				114C9FCB25CDDDBF0011852D /* Frameworks */,
+				114C9FCC25CDDDBF0011852D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "raid-list";
+			productName = "raid-list";
+			productReference = 114C9FCE25CDDDBF0011852D /* raid-list.app */;
+			productType = "com.apple.product-type.application";
+		};
+		114C9FE325CDDDC60011852D /* raid-listTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 114C9FFB25CDDDC60011852D /* Build configuration list for PBXNativeTarget "raid-listTests" */;
+			buildPhases = (
+				114C9FE025CDDDC60011852D /* Sources */,
+				114C9FE125CDDDC60011852D /* Frameworks */,
+				114C9FE225CDDDC60011852D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				114C9FE625CDDDC60011852D /* PBXTargetDependency */,
+			);
+			name = "raid-listTests";
+			productName = "raid-listTests";
+			productReference = 114C9FE425CDDDC60011852D /* raid-listTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		114C9FEE25CDDDC60011852D /* raid-listUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 114C9FFE25CDDDC60011852D /* Build configuration list for PBXNativeTarget "raid-listUITests" */;
+			buildPhases = (
+				114C9FEB25CDDDC60011852D /* Sources */,
+				114C9FEC25CDDDC60011852D /* Frameworks */,
+				114C9FED25CDDDC60011852D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				114C9FF125CDDDC60011852D /* PBXTargetDependency */,
+			);
+			name = "raid-listUITests";
+			productName = "raid-listUITests";
+			productReference = 114C9FEF25CDDDC60011852D /* raid-listUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		114C9FC625CDDDBF0011852D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					114C9FCD25CDDDBF0011852D = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					114C9FE325CDDDC60011852D = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 114C9FCD25CDDDBF0011852D;
+					};
+					114C9FEE25CDDDC60011852D = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 114C9FCD25CDDDBF0011852D;
+					};
+				};
+			};
+			buildConfigurationList = 114C9FC925CDDDBF0011852D /* Build configuration list for PBXProject "raid-list" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 114C9FC525CDDDBF0011852D;
+			productRefGroup = 114C9FCF25CDDDBF0011852D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				114C9FCD25CDDDBF0011852D /* raid-list */,
+				114C9FE325CDDDC60011852D /* raid-listTests */,
+				114C9FEE25CDDDC60011852D /* raid-listUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		114C9FCC25CDDDBF0011852D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				114C9FD925CDDDC60011852D /* Preview Assets.xcassets in Resources */,
+				114C9FD625CDDDC60011852D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		114C9FE225CDDDC60011852D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		114C9FED25CDDDC60011852D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		114C9FCA25CDDDBF0011852D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				114C9FDB25CDDDC60011852D /* Persistence.swift in Sources */,
+				114C9FDE25CDDDC60011852D /* raid_list.xcdatamodeld in Sources */,
+				114C9FD425CDDDBF0011852D /* ContentView.swift in Sources */,
+				114C9FD225CDDDBF0011852D /* raid_listApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		114C9FE025CDDDC60011852D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				114C9FE925CDDDC60011852D /* raid_listTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		114C9FEB25CDDDC60011852D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				114C9FF425CDDDC60011852D /* raid_listUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		114C9FE625CDDDC60011852D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 114C9FCD25CDDDBF0011852D /* raid-list */;
+			targetProxy = 114C9FE525CDDDC60011852D /* PBXContainerItemProxy */;
+		};
+		114C9FF125CDDDC60011852D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 114C9FCD25CDDDBF0011852D /* raid-list */;
+			targetProxy = 114C9FF025CDDDC60011852D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		114C9FF625CDDDC60011852D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		114C9FF725CDDDC60011852D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		114C9FF925CDDDC60011852D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"raid-list/Preview Content\"";
+				DEVELOPMENT_TEAM = DXDGL5HY4U;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "raid-list/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.tiimber.raid-list";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		114C9FFA25CDDDC60011852D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"raid-list/Preview Content\"";
+				DEVELOPMENT_TEAM = DXDGL5HY4U;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "raid-list/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.tiimber.raid-list";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		114C9FFC25CDDDC60011852D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DXDGL5HY4U;
+				INFOPLIST_FILE = "raid-listTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.tiimber.raid-listTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/raid-list.app/raid-list";
+			};
+			name = Debug;
+		};
+		114C9FFD25CDDDC60011852D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DXDGL5HY4U;
+				INFOPLIST_FILE = "raid-listTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.tiimber.raid-listTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/raid-list.app/raid-list";
+			};
+			name = Release;
+		};
+		114C9FFF25CDDDC60011852D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DXDGL5HY4U;
+				INFOPLIST_FILE = "raid-listUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.tiimber.raid-listUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "raid-list";
+			};
+			name = Debug;
+		};
+		114CA00025CDDDC60011852D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DXDGL5HY4U;
+				INFOPLIST_FILE = "raid-listUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.tiimber.raid-listUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "raid-list";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		114C9FC925CDDDBF0011852D /* Build configuration list for PBXProject "raid-list" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				114C9FF625CDDDC60011852D /* Debug */,
+				114C9FF725CDDDC60011852D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		114C9FF825CDDDC60011852D /* Build configuration list for PBXNativeTarget "raid-list" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				114C9FF925CDDDC60011852D /* Debug */,
+				114C9FFA25CDDDC60011852D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		114C9FFB25CDDDC60011852D /* Build configuration list for PBXNativeTarget "raid-listTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				114C9FFC25CDDDC60011852D /* Debug */,
+				114C9FFD25CDDDC60011852D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		114C9FFE25CDDDC60011852D /* Build configuration list for PBXNativeTarget "raid-listUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				114C9FFF25CDDDC60011852D /* Debug */,
+				114CA00025CDDDC60011852D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		114C9FDC25CDDDC60011852D /* raid_list.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				114C9FDD25CDDDC60011852D /* raid_list.xcdatamodel */,
+			);
+			currentVersion = 114C9FDD25CDDDC60011852D /* raid_list.xcdatamodel */;
+			path = raid_list.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 114C9FC625CDDDBF0011852D /* Project object */;
+}
