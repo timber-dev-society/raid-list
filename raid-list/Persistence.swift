@@ -13,10 +13,50 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-        }
+        
+        let grams = UnitSystem(context: viewContext)
+        grams.name = "grams"
+        grams.abbr = "g"
+        
+        let kilograms = UnitSystem(context: viewContext)
+        kilograms.name = "kilograms"
+        kilograms.abbr = "kg"
+        
+        let liter = UnitSystem(context: viewContext)
+        liter.name = "liters"
+        liter.abbr = "l"
+        
+        let unit = UnitSystem(context: viewContext)
+        unit.name = "item"
+        unit.abbr = "i"
+        
+        let 🥗 = Department(context: viewContext)
+        🥗.name = "undefined"
+        
+        let mercery = Department(context: viewContext)
+        mercery.name = "mercery"
+        
+        let fruits = Department(context: viewContext)
+        fruits.name = "fruits"
+        
+        let 🍎 = Product(context: viewContext)
+        🍎.name = "apple"
+        🍎.departement = 🥗
+        🍎.addToUnits(grams)
+        🍎.addToUnits(kilograms)
+        
+        let 🌶 = Product(context: viewContext)
+        🌶.name = "chili"
+        🌶.departement = 🥗
+        🌶.addToUnits(grams)
+        🌶.addToUnits(kilograms)
+        
+        let apples = ProductList(context: viewContext)
+        apples.product = 🍎
+        apples.quantity = 1
+        apples.unit = kilograms
+        apples.checked = false
+        
         do {
             try viewContext.save()
         } catch {

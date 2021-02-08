@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1113FBCB25CFFBC100253A59 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1113FBCD25CFFBC100253A59 /* Localizable.strings */; };
+		1113FBE025D021A900253A59 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1113FBDF25D021A900253A59 /* AddItemView.swift */; };
+		1113FBEE25D0740F00253A59 /* NewProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1113FBED25D0740F00253A59 /* NewProductView.swift */; };
 		114C9FD225CDDDBF0011852D /* raid_listApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9FD125CDDDBF0011852D /* raid_listApp.swift */; };
 		114C9FD425CDDDBF0011852D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9FD325CDDDBF0011852D /* ContentView.swift */; };
 		114C9FD625CDDDC60011852D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114C9FD525CDDDC60011852D /* Assets.xcassets */; };
@@ -35,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1113FBCC25CFFBC100253A59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1113FBD125CFFBC500253A59 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1113FBDF25D021A900253A59 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		1113FBED25D0740F00253A59 /* NewProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductView.swift; sourceTree = "<group>"; };
 		114C9FCE25CDDDBF0011852D /* raid-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "raid-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		114C9FD125CDDDBF0011852D /* raid_listApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = raid_listApp.swift; sourceTree = "<group>"; };
 		114C9FD325CDDDBF0011852D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +83,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1113FBD225CFFDAD00253A59 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				114C9FDC25CDDDC60011852D /* raid_list.xcdatamodeld */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		1113FBDE25D0217A00253A59 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				114C9FD325CDDDBF0011852D /* ContentView.swift */,
+				1113FBDF25D021A900253A59 /* AddItemView.swift */,
+				1113FBED25D0740F00253A59 /* NewProductView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		114C9FC525CDDDBF0011852D = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +124,14 @@
 		114C9FD025CDDDBF0011852D /* raid-list */ = {
 			isa = PBXGroup;
 			children = (
+				1113FBDE25D0217A00253A59 /* Views */,
+				1113FBD225CFFDAD00253A59 /* models */,
 				114C9FD125CDDDBF0011852D /* raid_listApp.swift */,
-				114C9FD325CDDDBF0011852D /* ContentView.swift */,
 				114C9FD525CDDDC60011852D /* Assets.xcassets */,
 				114C9FDA25CDDDC60011852D /* Persistence.swift */,
 				114C9FDF25CDDDC60011852D /* Info.plist */,
-				114C9FDC25CDDDC60011852D /* raid_list.xcdatamodeld */,
 				114C9FD725CDDDC60011852D /* Preview Content */,
+				1113FBCD25CFFBC100253A59 /* Localizable.strings */,
 			);
 			path = "raid-list";
 			sourceTree = "<group>";
@@ -221,6 +247,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 114C9FC525CDDDBF0011852D;
 			productRefGroup = 114C9FCF25CDDDBF0011852D /* Products */;
@@ -240,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				114C9FD925CDDDC60011852D /* Preview Assets.xcassets in Resources */,
+				1113FBCB25CFFBC100253A59 /* Localizable.strings in Resources */,
 				114C9FD625CDDDC60011852D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +297,8 @@
 				114C9FDE25CDDDC60011852D /* raid_list.xcdatamodeld in Sources */,
 				114C9FD425CDDDBF0011852D /* ContentView.swift in Sources */,
 				114C9FD225CDDDBF0011852D /* raid_listApp.swift in Sources */,
+				1113FBE025D021A900253A59 /* AddItemView.swift in Sources */,
+				1113FBEE25D0740F00253A59 /* NewProductView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +332,18 @@
 			targetProxy = 114C9FF025CDDDC60011852D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1113FBCD25CFFBC100253A59 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1113FBCC25CFFBC100253A59 /* en */,
+				1113FBD125CFFBC500253A59 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		114C9FF625CDDDC60011852D /* Debug */ = {

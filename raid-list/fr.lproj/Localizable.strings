@@ -1,0 +1,45 @@
+/* 
+  Localizable.strings
+  raid-list
+
+  Created by Noice Dious on 07/02/2021.
+  
+*/
+//A
+"add_item" = "Ajouter un produit";
+//B
+//C
+//D
+//E
+//F
+//G
+"g" = "g";
+"grams" = "grammes";
+//H
+//I
+"i" = "p.";
+"item" = "Pièce";
+//J
+//K
+"kg" = "kg";
+"kilograms" = "Kilogrames";
+//L
+"l" = "l";
+"liters" = "Litres";
+//M
+//N
+"new_product" = "Nouveau produit";
+//O
+//P
+"product_name" = "Nom du produit";
+//Q
+//R
+//S
+//T
+//U
+"undefined" = "Indéfini";
+//V
+//W
+//X
+//Y
+//Z
