@@ -38,6 +38,7 @@ struct ContentView: View {
                 List {
                     ForEach(productToBuy) { item in
                         HStack {
+                            
                             Button(action: {
                                 self.showNewProductSheet = true
                             }) {
@@ -45,8 +46,10 @@ struct ContentView: View {
                             }.labelStyle(IconOnlyLabelStyle())
                             
                             Text("\(item.product?.name ?? "blob") ")
+                            
                             Spacer()
-                            Text("\(item.quantity) \(item.unit?.abbr ?? "?")")
+                            
+                            Text("\(item.quantity) \(item.unit.abbr())")
                                 .foregroundColor(Color(UIColor.systemGray3))
                                 .font(.caption)
                         }
@@ -55,7 +58,7 @@ struct ContentView: View {
                 }
             }
             .sheet(isPresented: $showNewProductSheet) {
-                AddItemView()
+                AddItemView().environment(\.managedObjectContext, viewContext)
             }
             .toolbar {
                 #if os(iOS)
@@ -64,10 +67,10 @@ struct ContentView: View {
                         Button(action: addItem) {
                             HStack {
                                 Image(systemName: "plus.circle.fill")
+                                
                                 Text("add_item")
                             }
                         }
-                        
                         
                         EditButton()
                     }
@@ -78,8 +81,6 @@ struct ContentView: View {
                 #endif
                 
                 ToolbarItem(placement: .bottomBar) {
-                    
-                    
                 }
             }
             .navigationTitle("Raid list")

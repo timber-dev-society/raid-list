@@ -30,7 +30,6 @@ struct AddItemView: View {
     
     @State var selected: Product = Product()
     
-    
     var body: some View {
         let sheetIsPresented = Binding<Bool>(get: {
             return self.isNewProductSheetPresented
@@ -81,10 +80,10 @@ struct AddItemView: View {
             }
             .navigationBarTitle("add_item")
             .sheet(isPresented: $isNewProductSheetPresented) {
-                NewProductView(productName: $nameValue, isPresented: sheetIsPresented, selected: $selected)
+                NewProductView(productName: $nameValue, isPresented: sheetIsPresented, selected: $selected).environment(\.managedObjectContext, viewContext)
             }
             .sheet(isPresented: $isAddProductSheetPresented) {
-                ModalContentView(selected: $selected)
+                ModalContentView(selected: $selected).environment(\.managedObjectContext, viewContext)
             }
         }
     }
@@ -97,7 +96,7 @@ struct ModalContentView: View {
     
     @Binding var selected: Product
     
-    @State var selectedUnit: String = ""
+    @State var selectedUnit: UnitSystem = .none
     
     @State var selectedQuantity: String = ""
 
@@ -108,37 +107,43 @@ struct ModalContentView: View {
             TextField("quantity", text: $selectedQuantity)
                 .keyboardType(.numberPad)
             
-            Picker(selection: $selectedUnit, label: Text("quantity")) {
-                let units = selected.units!.allObjects as! [UnitSystem]
-                ForEach(0 ..< units.count) {
-                    let content = "\(units[$0].name ?? "undefined")"
-                    Text(content).tag(content)
+            Picker(selection: $selectedUnit, label: Text("unit")) {
+                ForEach(0 ..< selected.availableUnits.count) {
+                    let content = "\(selected.availableUnits[$0].name())"
+                    Text(content).tag(selected.availableUnits[$0].abbr())
                 }
             }
-            
-            Button(action: {
-                let product = ProductList(context: viewContext)
+
+            HStack {
+                Button(action: {
+                    let product = ProductList(context: viewContext)
+                    
+                    product.product = selected
+                    
+                    product.quantity = Float(selectedQuantity) ?? 0
+
+                    product.unit = selectedUnit
+                    
+                    do {
+                        try viewContext.save()
+                    } catch {
+                        // Replace this implementation with code to handle the error appropriately.
+                        // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                        let nsError = error as NSError
+                        fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                    }
+                }, label: {
+                    Text("add")
+                })
                 
-                product.product = selected
+                Spacer()
                 
-                product.quantity = Int16(selectedQuantity) ?? Int16(0)
-                
-                let units = selected.units!.allObjects as! [UnitSystem]
-                product.unit = units.first(where: { (unit: UnitSystem) -> Bool in
-                    return unit.name == selectedUnit
-                })!
-                
-                do {
-                    try viewContext.save()
-                } catch {
-                    // Replace this implementation with code to handle the error appropriately.
-                    // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                    let nsError = error as NSError
-                    fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-                }
-            }, label: {
-                Text("add")
-            })
+                Button(action: {
+                    presentation.wrappedValue.dismiss()
+                }, label: {
+                    Text("cancel")
+                })
+            }
         }
     }
 }

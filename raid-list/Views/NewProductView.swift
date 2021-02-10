@@ -23,13 +23,6 @@ struct NewProductView: View {
         animation: .default
     ) var departments: FetchedResults<Department>
     
-    @FetchRequest(
-        sortDescriptors: [
-            NSSortDescriptor(keyPath: \UnitSystem.name, ascending: true)
-        ],
-        animation: .default
-    ) var units: FetchedResults<UnitSystem>
-    
     @State var name: String = ""
     @State var isG: Bool = false
     @State var isKG: Bool = false
@@ -87,25 +80,19 @@ struct NewProductView: View {
             return department.name == selectedDepartment
         }
         
+        newProduct.availableUnits = [.none]
+        
         if (isG) {
-            newProduct.addToUnits(units.first(where: { (unit) -> Bool in
-                return unit.abbr == "g"
-            })!)
+            newProduct.availableUnits.append(.grams)
         }
         if (isKG) {
-            newProduct.addToUnits(units.first(where: { (unit) -> Bool in
-                return unit.abbr == "kg"
-            })!)
+            newProduct.availableUnits.append(.kilograms)
         }
         if (isL) {
-            newProduct.addToUnits(units.first(where: { (unit) -> Bool in
-                return unit.abbr == "l"
-            })!)
+            newProduct.availableUnits.append(.liters)
         }
         if (isI) {
-            newProduct.addToUnits(units.first(where: { (unit) -> Bool in
-                return unit.abbr == "i"
-            })!)
+            newProduct.availableUnits.append(.items)
         }
         
         do {
