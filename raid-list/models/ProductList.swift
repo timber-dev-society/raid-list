@@ -15,19 +15,28 @@ class ProductList: NSManagedObject {
         return NSFetchRequest<ProductList>(entityName: "ProductList")
     }
 
-    @NSManaged public var checked: Bool
-    @NSManaged public var quantity: Float
-    @NSManaged private var unitSystem: Int
-    
+    @NSManaged private var checked: NSNumber?
+    @NSManaged public var quantity: String?
+    @NSManaged private var unitSystem: NSNumber?
+    @NSManaged public var product: Product?
+
     public var unit: UnitSystem {
         get {
-            return UnitSystem(rawValue: unitSystem)!
+            return UnitSystem(rawValue: Int(truncating: unitSystem ?? 0) ) ?? .none
         }
         set {
-            unitSystem = newValue.rawValue
+            unitSystem = NSNumber(value: newValue.rawValue)
         }
     }
-    @NSManaged public var product: Product?
+    
+    public var isChecked: Bool {
+        get {
+            return Bool(exactly: checked ?? 0) ?? false
+        }
+        set {
+            checked = NSNumber(booleanLiteral: newValue)
+        }
+    }
 
 }
 

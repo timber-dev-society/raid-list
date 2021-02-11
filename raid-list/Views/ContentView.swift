@@ -49,7 +49,7 @@ struct ContentView: View {
                             
                             Spacer()
                             
-                            Text("\(item.quantity) \(item.unit.abbr())")
+                            Text("\(item.quantity ?? "") \(item.unit.abbr())")
                                 .foregroundColor(Color(UIColor.systemGray3))
                                 .font(.caption)
                         }
@@ -85,7 +85,7 @@ struct ContentView: View {
             }
             .navigationTitle("Raid list")
         }
-        
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 
     private func addItem() {

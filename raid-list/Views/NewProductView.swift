@@ -70,6 +70,7 @@ struct NewProductView: View {
             }
             .navigationTitle("new_product")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     private func saveItem() {

@@ -86,6 +86,8 @@ struct AddItemView: View {
                 ModalContentView(selected: $selected).environment(\.managedObjectContext, viewContext)
             }
         }
+
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
@@ -120,7 +122,7 @@ struct ModalContentView: View {
                     
                     product.product = selected
                     
-                    product.quantity = Float(selectedQuantity) ?? 0
+                    product.quantity = selectedQuantity
 
                     product.unit = selectedUnit
                     

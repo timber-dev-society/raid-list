@@ -35,9 +35,9 @@ struct PersistenceController {
         
         let apples = ProductList(context: viewContext)
         apples.product = 🍎
-        apples.quantity = 1
+        apples.quantity = "1"
         apples.unit = .kilograms
-        apples.checked = false
+        apples.isChecked = false
         
         do {
             try viewContext.save()
