@@ -14,7 +14,7 @@ struct NewProductView: View {
     
     @Binding var isPresented: Bool
     
-    @Binding var selected: Product
+    @Binding var selected: Product?
     
     @FetchRequest(
         sortDescriptors: [

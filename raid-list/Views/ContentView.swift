@@ -64,7 +64,7 @@ struct ContentView: View {
                 #if os(iOS)
                 ToolbarItem(placement: .navigationBarTrailing) {
                     HStack (spacing: 220) {
-                        Button(action: addItem) {
+                        NavigationLink(destination: AddItemView().environment(\.managedObjectContext, viewContext)) {
                             HStack {
                                 Image(systemName: "plus.circle.fill")
                                 

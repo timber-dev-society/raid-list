@@ -28,13 +28,13 @@ struct AddItemView: View {
     
     @State var presentList: Bool = false
     
-    @State var selected: Product = Product()
+    @State var selected: Product?
     
     var body: some View {
         let sheetIsPresented = Binding<Bool>(get: {
-            return self.isNewProductSheetPresented
+            return isNewProductSheetPresented
         }, set: {
-            self.isNewProductSheetPresented = $0
+            isNewProductSheetPresented = $0
         })
         
         NavigationView {
@@ -43,7 +43,7 @@ struct AddItemView: View {
                     .padding(15)
                     .onChange(of: nameValue) { newState in
                         withAnimation {
-                            self.productList = products.filter { (product) -> Bool in
+                            productList = products.filter { (product) -> Bool in
                                 if (newState == "") {
                                     return true;
                                 }
@@ -53,7 +53,11 @@ struct AddItemView: View {
                     }
                 
                 Button(action: {
-                    self.isNewProductSheetPresented = true
+                    
+                    print("click")
+                    
+                    print(isNewProductSheetPresented)
+                    isNewProductSheetPresented = true
                 }) {
                     HStack {
                         Image(systemName: "plus.circle.fill")
@@ -63,8 +67,8 @@ struct AddItemView: View {
                 
                 List(productList) { product in
                     Button(action: {
-                        self.selected = product
-                        self.isAddProductSheetPresented = true
+                        selected = product
+                        isAddProductSheetPresented = true
                     }) {
                         Text("\(product.name ?? "blob")")
                     }
@@ -72,13 +76,12 @@ struct AddItemView: View {
                 .listStyle(PlainListStyle())
                 .onAppear(perform: {
                     withAnimation {
-                        self.productList = products.filter { (product) -> Bool in
+                        productList = products.filter { (product) -> Bool in
                             return true
                         }
                     }
                 })
             }
-            .navigationBarTitle("add_item")
             .sheet(isPresented: $isNewProductSheetPresented) {
                 NewProductView(productName: $nameValue, isPresented: sheetIsPresented, selected: $selected).environment(\.managedObjectContext, viewContext)
             }
@@ -86,7 +89,8 @@ struct AddItemView: View {
                 ModalContentView(selected: $selected).environment(\.managedObjectContext, viewContext)
             }
         }
-
+        .navigationBarTitle("add_item")
+    
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }
@@ -96,7 +100,7 @@ struct ModalContentView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
     
-    @Binding var selected: Product
+    @Binding var selected: Product?
     
     @State var selectedUnit: UnitSystem = .none
     
@@ -104,15 +108,15 @@ struct ModalContentView: View {
 
     var body: some View {
         Form {
-            Text(selected.name ?? "blob")
+            Text(selected!.name ?? "blob")
             
             TextField("quantity", text: $selectedQuantity)
                 .keyboardType(.numberPad)
             
             Picker(selection: $selectedUnit, label: Text("unit")) {
-                ForEach(0 ..< selected.availableUnits.count) {
-                    let content = "\(selected.availableUnits[$0].name())"
-                    Text(content).tag(selected.availableUnits[$0].abbr())
+                ForEach(0 ..< selected!.availableUnits.count) {
+                    let content = "\(selected!.availableUnits[$0].name())"
+                    Text(content).tag(selected!.availableUnits[$0].abbr())
                 }
             }
 
