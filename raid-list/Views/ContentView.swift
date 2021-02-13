@@ -63,14 +63,26 @@ struct ContentView: View {
             .toolbar {
                 #if os(iOS)
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    HStack (spacing: 220) {
-                        NavigationLink(destination: AddItemView().environment(\.managedObjectContext, viewContext)) {
+                    HStack () {
+                        /*NavigationLink(destination: AddItemView().environment(\.managedObjectContext, viewContext)) {
                             HStack {
                                 Image(systemName: "plus.circle.fill")
                                 
                                 Text("add_item")
                             }
-                        }
+                        }*/
+                        
+                        Button(action: {
+                            showNewProductSheet = true
+                        }, label: {
+                            HStack {
+                                Image(systemName: "plus.circle.fill")
+                                
+                                Text("add_item")
+                            }
+                        })
+                        
+                        Spacer()
                         
                         EditButton()
                     }

@@ -22,6 +22,7 @@
 		115ADEB225D32C5000FEA43C /* UnitSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115ADEB125D32C5000FEA43C /* UnitSystem.swift */; };
 		1196F7EF25D3458700D75271 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1196F7EE25D3458700D75271 /* ProductList.swift */; };
 		1196F7F425D345D600D75271 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1196F7F325D345D600D75271 /* Product.swift */; };
+		11D727CC25D87FE50051AD40 /* raid_list.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 114C9FDC25CDDDC60011852D /* raid_list.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -323,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				114C9FE925CDDDC60011852D /* raid_listTests.swift in Sources */,
+				11D727CC25D87FE50051AD40 /* raid_list.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +397,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Nicolas Dufreche (W93NY52MCE)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -456,6 +459,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Nicolas Dufreche (W93NY52MCE)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
