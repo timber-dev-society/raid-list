@@ -14,23 +14,23 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         
-        let 🥗 = Department(context: viewContext)
+        let 🥗 = Shelf(context: viewContext)
         🥗.name = "undefined"
         
-        let mercery = Department(context: viewContext)
+        let mercery = Shelf(context: viewContext)
         mercery.name = "mercery"
         
-        let fruits = Department(context: viewContext)
+        let fruits = Shelf(context: viewContext)
         fruits.name = "fruits"
         
         let 🍎 = Product(context: viewContext)
         🍎.name = "apple"
-        🍎.departement = 🥗
+        🍎.shelf = 🥗
         🍎.availableUnits = [.none, .grams, .kilograms]
         
         let 🌶 = Product(context: viewContext)
         🌶.name = "chili"
-        🌶.departement = 🥗
+        🌶.shelf = 🥗
         🌶.availableUnits = [.none, .grams, .kilograms]
         
         let apples = ProductList(context: viewContext)

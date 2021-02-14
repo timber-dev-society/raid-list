@@ -10,19 +10,17 @@
 		1113FBCB25CFFBC100253A59 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1113FBCD25CFFBC100253A59 /* Localizable.strings */; };
 		1113FBE025D021A900253A59 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1113FBDF25D021A900253A59 /* AddItemView.swift */; };
 		1113FBEE25D0740F00253A59 /* NewProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1113FBED25D0740F00253A59 /* NewProductView.swift */; };
-		1136CB8825D34A20001A7377 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1136CB8725D34A20001A7377 /* Department.swift */; };
 		114C9FD225CDDDBF0011852D /* raid_listApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9FD125CDDDBF0011852D /* raid_listApp.swift */; };
 		114C9FD425CDDDBF0011852D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9FD325CDDDBF0011852D /* ContentView.swift */; };
 		114C9FD625CDDDC60011852D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114C9FD525CDDDC60011852D /* Assets.xcassets */; };
 		114C9FD925CDDDC60011852D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114C9FD825CDDDC60011852D /* Preview Assets.xcassets */; };
 		114C9FDB25CDDDC60011852D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9FDA25CDDDC60011852D /* Persistence.swift */; };
-		114C9FDE25CDDDC60011852D /* raid_list.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 114C9FDC25CDDDC60011852D /* raid_list.xcdatamodeld */; };
 		114C9FE925CDDDC60011852D /* raid_listTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9FE825CDDDC60011852D /* raid_listTests.swift */; };
 		114C9FF425CDDDC60011852D /* raid_listUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9FF325CDDDC60011852D /* raid_listUITests.swift */; };
+		114E88DC25D9D55F002CCE72 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 114E88DA25D9D55F002CCE72 /* Model.xcdatamodeld */; };
 		115ADEB225D32C5000FEA43C /* UnitSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115ADEB125D32C5000FEA43C /* UnitSystem.swift */; };
 		1196F7EF25D3458700D75271 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1196F7EE25D3458700D75271 /* ProductList.swift */; };
 		1196F7F425D345D600D75271 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1196F7F325D345D600D75271 /* Product.swift */; };
-		11D727CC25D87FE50051AD40 /* raid_list.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 114C9FDC25CDDDC60011852D /* raid_list.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +45,12 @@
 		1113FBD125CFFBC500253A59 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1113FBDF25D021A900253A59 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 		1113FBED25D0740F00253A59 /* NewProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductView.swift; sourceTree = "<group>"; };
-		1136CB8725D34A20001A7377 /* Department.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
 		114C9FCE25CDDDBF0011852D /* raid-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "raid-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		114C9FD125CDDDBF0011852D /* raid_listApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = raid_listApp.swift; sourceTree = "<group>"; };
 		114C9FD325CDDDBF0011852D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		114C9FD525CDDDC60011852D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		114C9FD825CDDDC60011852D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		114C9FDA25CDDDC60011852D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		114C9FDD25CDDDC60011852D /* raid_list.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = raid_list.xcdatamodel; sourceTree = "<group>"; };
 		114C9FDF25CDDDC60011852D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		114C9FE425CDDDC60011852D /* raid-listTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "raid-listTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		114C9FE825CDDDC60011852D /* raid_listTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = raid_listTests.swift; sourceTree = "<group>"; };
@@ -62,6 +58,7 @@
 		114C9FEF25CDDDC60011852D /* raid-listUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "raid-listUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		114C9FF325CDDDC60011852D /* raid_listUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = raid_listUITests.swift; sourceTree = "<group>"; };
 		114C9FF525CDDDC60011852D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		114E88DB25D9D55F002CCE72 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		115ADEB125D32C5000FEA43C /* UnitSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitSystem.swift; sourceTree = "<group>"; };
 		1196F7EE25D3458700D75271 /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
 		1196F7F325D345D600D75271 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -95,11 +92,10 @@
 		1113FBD225CFFDAD00253A59 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				114C9FDC25CDDDC60011852D /* raid_list.xcdatamodeld */,
 				115ADEB125D32C5000FEA43C /* UnitSystem.swift */,
 				1196F7EE25D3458700D75271 /* ProductList.swift */,
 				1196F7F325D345D600D75271 /* Product.swift */,
-				1136CB8725D34A20001A7377 /* Department.swift */,
+				114E88DA25D9D55F002CCE72 /* Model.xcdatamodeld */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -310,10 +306,9 @@
 				1196F7EF25D3458700D75271 /* ProductList.swift in Sources */,
 				1196F7F425D345D600D75271 /* Product.swift in Sources */,
 				115ADEB225D32C5000FEA43C /* UnitSystem.swift in Sources */,
-				114C9FDE25CDDDC60011852D /* raid_list.xcdatamodeld in Sources */,
 				114C9FD425CDDDBF0011852D /* ContentView.swift in Sources */,
+				114E88DC25D9D55F002CCE72 /* Model.xcdatamodeld in Sources */,
 				114C9FD225CDDDBF0011852D /* raid_listApp.swift in Sources */,
-				1136CB8825D34A20001A7377 /* Department.swift in Sources */,
 				1113FBE025D021A900253A59 /* AddItemView.swift in Sources */,
 				1113FBEE25D0740F00253A59 /* NewProductView.swift in Sources */,
 			);
@@ -324,7 +319,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				114C9FE925CDDDC60011852D /* raid_listTests.swift in Sources */,
-				11D727CC25D87FE50051AD40 /* raid_list.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,13 +646,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		114C9FDC25CDDDC60011852D /* raid_list.xcdatamodeld */ = {
+		114E88DA25D9D55F002CCE72 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				114C9FDD25CDDDC60011852D /* raid_list.xcdatamodel */,
+				114E88DB25D9D55F002CCE72 /* Model.xcdatamodel */,
 			);
-			currentVersion = 114C9FDD25CDDDC60011852D /* raid_list.xcdatamodel */;
-			path = raid_list.xcdatamodeld;
+			currentVersion = 114E88DB25D9D55F002CCE72 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

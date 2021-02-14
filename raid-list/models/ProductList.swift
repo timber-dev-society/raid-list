@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 
-class ProductList: NSManagedObject {
+public class ProductList: NSManagedObject {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<ProductList> {
         return NSFetchRequest<ProductList>(entityName: "ProductList")

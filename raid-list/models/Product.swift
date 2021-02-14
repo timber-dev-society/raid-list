@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 
-class Product: NSManagedObject {
+public class Product: NSManagedObject {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Product> {
         return NSFetchRequest<Product>(entityName: "Product")
@@ -17,7 +17,7 @@ class Product: NSManagedObject {
 
     @NSManaged public var name: String?
     @NSManaged private var units: Array<Int>?
-    @NSManaged public var departement: Department?
+    @NSManaged public var shelf: Shelf?
     @NSManaged public var lists: ProductList?
     
     public var availableUnits: [UnitSystem] {

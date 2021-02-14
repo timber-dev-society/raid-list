@@ -18,17 +18,17 @@ struct NewProductView: View {
     
     @FetchRequest(
         sortDescriptors: [
-            NSSortDescriptor(keyPath: \Department.name, ascending: true)
+            NSSortDescriptor(keyPath: \Shelf.name, ascending: true)
         ],
         animation: .default
-    ) var departments: FetchedResults<Department>
+    ) var shelves: FetchedResults<Shelf>
     
     @State var name: String = ""
     @State var isG: Bool = false
     @State var isKG: Bool = false
     @State var isL: Bool = false
     @State var isI: Bool = false
-    @State var selectedDepartment: String = ""
+    @State var selectedShelf: String = ""
     
     var body: some View {
         NavigationView {
@@ -55,10 +55,10 @@ struct NewProductView: View {
                     }
                 }
                 
-                Section(header: Text("department")) {
-                    Picker(selection: $selectedDepartment, label: Text("select")) {
-                        ForEach(0 ..< departments.count) {
-                            let content = "\(departments[$0].name ?? "undefined")"
+                Section(header: Text("shelf")) {
+                    Picker(selection: $selectedShelf, label: Text("select")) {
+                        ForEach(0 ..< shelves.count) {
+                            let content = "\(shelves[$0].name ?? "undefined")"
                             Text(content).tag(content)
                         }
                     }
@@ -77,8 +77,8 @@ struct NewProductView: View {
         let newProduct = Product(context: viewContext)
         newProduct.name = name
         
-        newProduct.departement = departments.first { (department) -> Bool in
-            return department.name == selectedDepartment
+        newProduct.shelf = shelves.first { (shelf) -> Bool in
+            return shelf.name == selectedShelf
         }
         
         newProduct.availableUnits = [.none]
@@ -113,7 +113,7 @@ struct NewProductView: View {
 struct NewProductView_Previews: PreviewProvider {
     static var previews: some View {
         
-        NewProductView(productName: .constant("eau"), isPresented: .constant(true), selected: .constant(Product())).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        NewProductView(productName: .constant("eau"), isPresented: .constant(true), selected: .constant(Product(context: PersistenceController.preview.container.viewContext))).environment(\		.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
 

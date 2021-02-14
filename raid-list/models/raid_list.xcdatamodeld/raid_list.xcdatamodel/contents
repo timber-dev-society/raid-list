@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Department" representedClassName=".Department" syncable="YES">
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="departement" inverseEntity="Product"/>
-    </entity>
     <entity name="Product" representedClassName=".Product" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="units" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromDataTransformer" customClassName="Array&lt;UnitSystem&gt;"/>
-        <relationship name="departement" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Department" inverseName="products" inverseEntity="Department"/>
         <relationship name="lists" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProductList" inverseName="product" inverseEntity="ProductList"/>
+        <relationship name="shelf" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Shelf" inverseName="products" inverseEntity="Shelf"/>
     </entity>
     <entity name="ProductList" representedClassName=".ProductList" syncable="YES">
         <attribute name="checked" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
@@ -16,9 +12,13 @@
         <attribute name="unit" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromDataTransformer" customClassName="UnitSystem"/>
         <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="lists" inverseEntity="Product"/>
     </entity>
+    <entity name="Shelf" representedClassName=".Shelf" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="shelf" inverseEntity="Product"/>
+    </entity>
     <elements>
-        <element name="Department" positionX="145.7777099609375" positionY="-469.2328338623047" width="128" height="59"/>
-        <element name="Product" positionX="480.496826171875" positionY="-397.8900146484375" width="128" height="89"/>
-        <element name="ProductList" positionX="-59.8543701171875" positionY="-121.8686218261719" width="128" height="89"/>
+        <element name="Product" positionX="667.806396484375" positionY="-251.1795043945312" width="128" height="103"/>
+        <element name="ProductList" positionX="-156.2508544921875" positionY="-413.2637786865234" width="128" height="89"/>
+        <element name="Shelf" positionX="217.2706298828125" positionY="-106.0929565429688" width="128" height="59"/>
     </elements>
 </model>

@@ -7,7 +7,7 @@
 
 import Foundation
 
-@objc enum UnitSystem: Int, Equatable, CaseIterable {
+public enum UnitSystem: Int, Equatable, CaseIterable {
     case none = 0, grams = 1, kilograms = 2, liters = 3, items = 4
     
     // var localizedName: LocalizedStringKey { LocalizedStringKey(rawValue) }
