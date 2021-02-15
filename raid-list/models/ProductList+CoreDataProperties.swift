@@ -1,23 +1,23 @@
 //
-//  ProductList.swift
+//  ProductList+CoreDataProperties.swift
 //  raid-list
 //
-//  Created by Noice Dious on 09/02/2021.
+//  Created by Noice Dious on 15/02/2021.
+//
 //
 
 import Foundation
 import CoreData
 
-@objc(ProductList)
-public class ProductList: NSManagedObject {
+
+extension ProductList {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<ProductList> {
         return NSFetchRequest<ProductList>(entityName: "ProductList")
     }
 
-    @NSManaged private var checked: NSNumber?
     @NSManaged public var quantity: String?
-    @NSManaged private var unitSystem: NSNumber?
+    @NSManaged public var units: Int?
     @NSManaged public var product: Product?
 
     public var unit: UnitSystem {
@@ -37,7 +37,6 @@ public class ProductList: NSManagedObject {
             checked = NSNumber(booleanLiteral: newValue)
         }
     }
-
 }
 
 extension ProductList : Identifiable {

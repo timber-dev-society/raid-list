@@ -19,6 +19,12 @@
 		114C9FF425CDDDC60011852D /* raid_listUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9FF325CDDDC60011852D /* raid_listUITests.swift */; };
 		114E88DC25D9D55F002CCE72 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 114E88DA25D9D55F002CCE72 /* Model.xcdatamodeld */; };
 		115ADEB225D32C5000FEA43C /* UnitSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115ADEB125D32C5000FEA43C /* UnitSystem.swift */; };
+		117E451D25DAAAC0006056A0 /* ProductList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E451725DAAAC0006056A0 /* ProductList+CoreDataClass.swift */; };
+		117E451E25DAAAC0006056A0 /* ProductList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E451825DAAAC0006056A0 /* ProductList+CoreDataProperties.swift */; };
+		117E451F25DAAAC0006056A0 /* Shelf+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E451925DAAAC0006056A0 /* Shelf+CoreDataClass.swift */; };
+		117E452025DAAAC0006056A0 /* Shelf+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E451A25DAAAC0006056A0 /* Shelf+CoreDataProperties.swift */; };
+		117E452125DAAAC0006056A0 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E451B25DAAAC0006056A0 /* Product+CoreDataClass.swift */; };
+		117E452225DAAAC0006056A0 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E451C25DAAAC0006056A0 /* Product+CoreDataProperties.swift */; };
 		1196F7EF25D3458700D75271 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1196F7EE25D3458700D75271 /* ProductList.swift */; };
 		1196F7F425D345D600D75271 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1196F7F325D345D600D75271 /* Product.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +66,12 @@
 		114C9FF525CDDDC60011852D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		114E88DB25D9D55F002CCE72 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		115ADEB125D32C5000FEA43C /* UnitSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitSystem.swift; sourceTree = "<group>"; };
+		117E451725DAAAC0006056A0 /* ProductList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		117E451825DAAAC0006056A0 /* ProductList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		117E451925DAAAC0006056A0 /* Shelf+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shelf+CoreDataClass.swift"; sourceTree = "<group>"; };
+		117E451A25DAAAC0006056A0 /* Shelf+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shelf+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		117E451B25DAAAC0006056A0 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = "<group>"; };
+		117E451C25DAAAC0006056A0 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1196F7EE25D3458700D75271 /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
 		1196F7F325D345D600D75271 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +104,12 @@
 		1113FBD225CFFDAD00253A59 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				117E451725DAAAC0006056A0 /* ProductList+CoreDataClass.swift */,
+				117E451825DAAAC0006056A0 /* ProductList+CoreDataProperties.swift */,
+				117E451925DAAAC0006056A0 /* Shelf+CoreDataClass.swift */,
+				117E451A25DAAAC0006056A0 /* Shelf+CoreDataProperties.swift */,
+				117E451B25DAAAC0006056A0 /* Product+CoreDataClass.swift */,
+				117E451C25DAAAC0006056A0 /* Product+CoreDataProperties.swift */,
 				115ADEB125D32C5000FEA43C /* UnitSystem.swift */,
 				1196F7EE25D3458700D75271 /* ProductList.swift */,
 				1196F7F325D345D600D75271 /* Product.swift */,
@@ -305,9 +323,15 @@
 				114C9FDB25CDDDC60011852D /* Persistence.swift in Sources */,
 				1196F7EF25D3458700D75271 /* ProductList.swift in Sources */,
 				1196F7F425D345D600D75271 /* Product.swift in Sources */,
+				117E452125DAAAC0006056A0 /* Product+CoreDataClass.swift in Sources */,
+				117E451D25DAAAC0006056A0 /* ProductList+CoreDataClass.swift in Sources */,
+				117E452225DAAAC0006056A0 /* Product+CoreDataProperties.swift in Sources */,
 				115ADEB225D32C5000FEA43C /* UnitSystem.swift in Sources */,
 				114C9FD425CDDDBF0011852D /* ContentView.swift in Sources */,
+				117E451F25DAAAC0006056A0 /* Shelf+CoreDataClass.swift in Sources */,
 				114E88DC25D9D55F002CCE72 /* Model.xcdatamodeld in Sources */,
+				117E452025DAAAC0006056A0 /* Shelf+CoreDataProperties.swift in Sources */,
+				117E451E25DAAAC0006056A0 /* ProductList+CoreDataProperties.swift in Sources */,
 				114C9FD225CDDDBF0011852D /* raid_listApp.swift in Sources */,
 				1113FBE025D021A900253A59 /* AddItemView.swift in Sources */,
 				1113FBEE25D0740F00253A59 /* NewProductView.swift in Sources */,
